@@ -1,21 +1,11 @@
 *{box-sizing:border-box}html,body{height:100%}body{
-  margin:0;
-  font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;
+  margin:0; font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;
   color:#fff; overflow-x:hidden; background:#0b1020;
-}
-.bg-gradient{
-  position:fixed; inset:0;
-  background: radial-gradient(1200px 800px at 80% 20%, #3b82f6 0%, transparent 60%),
-              radial-gradient(1000px 700px at 20% 80%, #10b981 0%, transparent 60%),
-              radial-gradient(900px 600px at 50% 50%, #7c3aed 0%, transparent 55%);
-  filter: blur(40px) saturate(120%);
-  opacity:.35; z-index:-1;
 }
 .container{max-width:980px;margin:0 auto;padding:32px 20px; position:relative; z-index:4;}
 .header{text-align:center}
 .header h1{font-weight:800;margin:10px 0 0;font-size:clamp(28px,4vw,56px);letter-spacing:.5px}
 .subtitle{opacity:.9;margin-top:4px}
-
 .timer{display:flex;align-items:center;justify-content:center;gap:14px;margin:28px 0 8px}
 .unit{display:flex;flex-direction:column;align-items:center;justify-content:center;
   background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12);
@@ -24,26 +14,11 @@
 .unit span{font-size:clamp(32px,6vw,64px); font-weight:800; line-height:1}
 .unit small{font-weight:600; opacity:.9; margin-top:6px; letter-spacing:.5px}
 .sep{font-size:clamp(24px,5vw,44px);opacity:.8;margin:0 2px 14px}
-
 .hero{position:relative;display:grid;place-items:center;margin:26px 0 14px}
 .caricature{width:min(340px,70vw); border-radius:20px; box-shadow:0 20px 60px rgba(0,0,0,.45); transform: rotate(-2deg);}
-
-/* Overlay canvas for dashed trail */
-.trail{
-  position: fixed; inset: 0;
-  pointer-events: none;
-  z-index: 2;
-}
-
-/* Airplane positioned by JS (fixed layer) */
-.airplane{
-  position: fixed; left: 0; top: 0;
-  width: 140px;
-  transform-origin: 50% 50%;
-  filter: drop-shadow(0 6px 16px rgba(0,0,0,.35));
-  z-index: 3;
-}
-
+.trail{position: fixed; inset: 0; pointer-events: none; z-index: 2;}
+.airplane{position: fixed; left: 0; top: 0; width: 140px; transform-origin: 50% 50%;
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,.35)); z-index: 3;}
 .footer{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:24px;flex-wrap:wrap}
 .btn{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;
   padding:10px 14px;border-radius:12px;cursor:pointer;font-weight:600}

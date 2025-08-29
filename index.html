@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contagem Regressiva — Chegada em Florianópolis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <meta name="description" content="Contagem regressiva para a chegada em Florianópolis.">
+</head>
+<body>
+  <canvas id="trail" class="trail" aria-hidden="true"></canvas>
+
+  <main class="container">
+    <header class="header">
+      <h1>Rumo a Floripa ✈️</h1>
+      <p class="subtitle">Chegada prevista: <strong>30/12/2025 18:30 (GMT-3)</strong></p>
+    </header>
+
+    <section class="timer" aria-live="polite">
+      <div class="unit"><span id="days">0</span><small>dias</small></div>
+      <div class="sep">:</div>
+      <div class="unit"><span id="hours">0</span><small>horas</small></div>
+      <div class="sep">:</div>
+      <div class="unit"><span id="minutes">0</span><small>min</small></div>
+      <div class="sep">:</div>
+      <div class="unit"><span id="seconds">0</span><small>seg</small></div>
+    </section>
+
+    <section class="hero">
+      <img src="./assets/caricature.png" class="caricature" alt="Caricatura" />
+      <img src="./assets/airplane.svg" class="airplane" alt="Avião" />
+    </section>
+
+    <footer class="footer">
+      <button id="toggle-sound" class="btn">Som: <span id="sound-state">OFF</span></button>
+      <p class="credit">feito com ❤️ e ansiedade boa</p>
+    </footer>
+  </main>
+
+  <audio id="ping" preload="auto">
+    <source src="data:audio/mp3;base64,//uQxAAAAAAAAAAAAAAAAAAAAAA..." type="audio/mpeg">
+  </audio>
+
+  <script src="./script.js"></script>
+</body>
+</html>
